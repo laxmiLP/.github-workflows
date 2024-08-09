@@ -20,15 +20,15 @@ jobs:
 
       - name: Terraform Init
         run: terraform init
-        working-directory: /.github-workflows
+        working-directory: /laxmiLP/.github-workflows.git
 
       - name: Terraform Plan
         run: terraform plan
-        working-directory: /.github-workflows
+        working-directory: /laxmiLP/.github-workflows.git
 
       - name: Terraform Apply
         run: terraform apply -auto-approve
-        working-directory: /.github-workflows
+        working-directory: /laxmiLP/.github-workflows.git
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
